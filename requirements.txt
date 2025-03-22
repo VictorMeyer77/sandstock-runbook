@@ -2,3 +2,4 @@ azure_identity==1.21.0
 azure_core==1.32.0
 azure-keyvault-secrets==4.9.0
 azure-mgmt-resource==23.3.0
+types-requests==2.32.0.20250306
