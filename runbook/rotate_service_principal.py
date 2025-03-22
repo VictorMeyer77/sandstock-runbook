@@ -11,7 +11,7 @@ from azure.keyvault.secrets import SecretClient
 
 args = json.loads(sys.argv[1])
 
-GRAPH_API_URL = f"https://graph.microsoft.com/v1.0/servicePrincipals/{args['sp_id']}/addPassword"
+GRAPH_API_URL = f"https://graph.microsoft.com/v1.0/{args['sp_id']}/addPassword"
 
 # Authenticate to Azure
 credential = DefaultAzureCredential()
