@@ -7,11 +7,11 @@ from azure.identity import DefaultAzureCredential
 from azure.keyvault.secrets import SecretClient
 
 # Expected input schema
-# {"sp_id": "id", "kv_name": "name", "kv_secret_name": "name",  "app_name": "name", "rotation_days": 30}
+# {"sp": "/servicePrincipals/<id>", "kv_name": "name", "kv_secret_name": "name",  "app_name": "name", "rotation_days": 30}
 
 args = json.loads(sys.argv[1])
 
-GRAPH_API_URL = f"https://graph.microsoft.com/v1.0/{args['sp_id']}/addPassword"
+GRAPH_API_URL = f"https://graph.microsoft.com/v1.0/{args['sp']}/addPassword"
 
 # Authenticate to Azure
 credential = DefaultAzureCredential()
